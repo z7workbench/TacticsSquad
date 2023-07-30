@@ -17,7 +17,7 @@ jobs:
           architecture: x64 # (x64 or x86) - defaults to x64
       - name: build apk
         run: |
-          openssl enc -d --aes-256-cbc -K $key -iv $iv -in butterfly-keystore.jks.enc -out butterfly-keystore.jks -salt -pbkdf2
+          openssl enc -d --aes-256-cbc -K $key -iv $iv -in tactics-keystore.jks.enc -out tactics-keystore.jks -salt -pbkdf2
           chmod +x gradlew
           ./gradlew assembleRelease
         env:
